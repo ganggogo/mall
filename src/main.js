@@ -1,13 +1,16 @@
 import Vue from 'vue'
-import App from './App.vue'
-import './registerServiceWorker'
+import App from './App'
 import router from './router'
-import store from './store'
 
 Vue.config.productionTip = false
 
+/* eslint-disable no-new */
 new Vue({
+  el: '#app',
   router,
-  store,
   render: h => h(App)
-}).$mount('#app')
+})
+
+
+//虽然这里可以引用css文件，但是一般不在这用
+// require("./assets/css/base.css")
